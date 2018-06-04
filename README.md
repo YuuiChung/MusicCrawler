@@ -4,7 +4,7 @@ http://www.wkis.top:8080/crawler/songs
 
 ## 目录
 ├── com.yrw.crawler <br>
-    ├── Application.java		//启动Spring boot<br>
+	├── Application.java		//启动Spring boot<br>
     ├── Crawler.java			// 爬虫的接口，定义了爬虫重要方法<br>
     ├── HtmlFetcher.java		//获取Html页面的方法<br>
     ├── HtmlParser.java			//解析Html页面的方法<br>
@@ -16,7 +16,7 @@ http://www.wkis.top:8080/crawler/songs
 ├── com.yrw.model			// 数据模型<br>
 ├── com.yrw.task			//定时任务<br>
 
-##使用方法：
+## 使用方法：
 #### 建立3个表：
 表web_page<br>
 CREATE TABLE IF NOT EXISTS `web_page` (<br>
