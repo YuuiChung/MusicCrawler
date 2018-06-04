@@ -1,16 +1,19 @@
 # 网易云音乐爬虫
 http://www.wkis.top:8080/crawler/songs
 ## 效果
-
+![](https://github.com/YuuiChung/MusicCrawler/blob/master/src/main/resources/static/webImage/1.png)
+![](https://github.com/YuuiChung/MusicCrawler/blob/master/src/main/resources/static/webImage/2.png)
+![](https://github.com/YuuiChung/MusicCrawler/blob/master/src/main/resources/static/webImage/3.png)
+![](https://github.com/YuuiChung/MusicCrawler/blob/master/src/main/resources/static/webImage/4.png)
 ## 目录
 ├── com.yrw.crawler <br>
-	├── Application.java		//启动Spring boot<br>
-    ├── Crawler.java			// 爬虫的接口，定义了爬虫重要方法<br>
-    ├── HtmlFetcher.java		//获取Html页面的方法<br>
-    ├── HtmlParser.java			//解析Html页面的方法<br>
+　　├── Application.java		//启动Spring boot<br>
+　　├── Crawler.java			// 爬虫的接口，定义了爬虫重要方法<br>
+　　├── HtmlFetcher.java		//获取Html页面的方法<br>
+　　├── HtmlParser.java			//解析Html页面的方法<br>   	 	 
 ├── com.yrw.crawler.impl<br>
-    ├── MultiCrawlerThread.java			//爬虫的流程<br>
-    ├── MultiCrawlerWithMybatis.java	//爬虫的实现类，用mybatis实现<br>
+　　├── MultiCrawlerThread.java			//爬虫的流程<br>
+　　├── MultiCrawlerWithMybatis.java	//爬虫的实现类，用mybatis实现<br>
 ├── com.yrw.crawler.controller		 //controller层，用于展示爬虫的结果<br>
 ├── com.yrw.crawler.mapper			// mapper层，用mybatis实现数据持久化<br>
 ├── com.yrw.model			// 数据模型<br>
