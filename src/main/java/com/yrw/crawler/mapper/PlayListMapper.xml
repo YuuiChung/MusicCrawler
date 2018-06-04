@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.yrw.crawler.mapper.PlayListMapper">
+	<cache/>
+
+<insert id="save" parameterType="PlayList">
+	insert into playlist values (#{id}, #{name}, #{url}, #{author}, #{image}, #{playCount}, #{collectCount},#{introduction},#{tag})
+</insert>
+
+<select id="findById" resultType="String">
+	select id from playlist where id = #{id}
+</select>
+
+<select id="findAll" resultType="PlayList">
+	select id,name, url, author, image, playCount, collectCount, introduction,tag  from playlist 
+</select>
+
+<select id="findAllByPlayCount" resultType="PlayList">
+	select id,name, url, author, image, playCount, collectCount, introduction,tag  from playlist order by playCount desc
+</select>
+
+</mapper>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.yrw.crawler.mapper.SongMapper">
+	<cache/>
+
+<insert id="save" parameterType="Song">
+	insert into song values (#{id}, #{url}, #{title}, #{author}, #{image}, #{album}, #{commentCount})
+</insert>
+
+<select id="findById" resultType="String">
+	select id from song where id = #{id}
+</select>
+
+<select id="findAll" resultType="Song">
+	select url, title, author, image, album, commentCount from song order by commentCount desc
+</select>
+
+</mapper>

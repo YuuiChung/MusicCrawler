@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"  xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>PlayCount</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Music Life Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<link href="/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="/css/lightbox.css" type="text/css" media="all" />
+<!-- //for-mobile-apps -
+<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css"></link> -->
+<link rel="stylesheet" type="text/css" href="/css/component.css" />
+<script src="/js/modernizr.custom.js"></script>
+<!-- js -->
+<script src="/js/jquery-1.11.1.min.js"></script>
+<!-- //js -->
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+	<!-- start-smoth-scrolling -->
+		<script type="text/javascript" src="/js/move-top.js"></script>
+		<script type="text/javascript" src="/js/easing.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+		</script>
+	<!-- start-smoth-scrolling -->
+	<script src="/js/hover_pack.js"></script>
+</head>
+<body>
+<!-- banner -->
+<div class="banner">
+	<div class="col-md-2 banner-left">
+		<h1><a href="index.html">MU<span>SIC</span> <i>LIFE</i></a></h1>
+	</div>
+	<div class="col-md-10 banner-right">
+		<div class="navigation">
+			<div class="nav-left">
+				<span class="menu"><img src="/images/menu.png" alt=""/></span>
+						<ul class="nav1">
+							<li class="hvr-underline-from-left button2"><a href="index.html">Home</a></li>
+							<li class="hvr-underline-from-left button2"><a href="playlist">Albums</a></li>
+							<li class="hvr-underline-from-left button2"><a href="songs">Songs</a></li>
+							<li class="hvr-underline-from-left button2"><a href="comments">Comments</a></li>
+							<li class="hvr-underline-from-left button2"><a class="active" href="playcount">PlayCount</a></li>
+						</ul>
+						<!-- script for menu -->
+							<script> 
+								$( "span.menu" ).click(function() {
+								$( "ul.nav1" ).slideToggle( 300, function() {
+								 // Animation complete.
+								});
+								});
+							</script>
+						<!-- //script for menu -->
+					
+			</div>
+			<div class="nav-right">
+				<ul>
+					<li><a href="#" class="f1"></a></li>
+					<li><a href="#" class="f2"></a></li>
+					<li><a href="#" class="f3"></a></li>
+					<li><a href="#" class="f4"></a></li>
+				</ul>				
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		
+		<table class="table"> 
+        <thead>
+            <tr>
+                <th>封面</th>
+                <th>歌单</th>
+                <th>作者</th>
+                <th>播放数</th>
+                <th>收藏数</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="playlists: ${playlist.list}">
+            	<td><img th:src="${playlists.image}" alt="" height="80px" weight="80px"></td>
+                <td><a th:text="${playlists.name}" th:href="@{${playlists.url}}" target="_blank"></a></td>
+                <td th:text="${playlists.author}"></td>
+                <td th:text="${playlists.playCount}"></td>
+                <td th:text="${playlists.collectCount}"></td>
+            </tr>
+        </tbody>
+      </table>
+        <nav>
+        <ul class="pager">
+          <li th:if="${playlist.hasPreviousPage}" class="previous"><a th:href="@{'playcount' + '?page=' + ${playlist.prePage}}">上一页<span aria-hidden="true">&larr;</span></a></li>
+          <li th:if="${playlist.hasNextPage}" class="next"><a th:href="@{'playcount' + '?page=' + ${playlist.nextPage}}">下一页<span aria-hidden="true">&rarr;</span></a></li>
+        </ul>
+      </nav>
+		<!--footer-->
+			<div class="footer">
+					<div class="col-md-3 footer-grid">
+						<h4>Address</h4>
+						<ul>
+							<li>MUSIC LIFE</li>
+							<li>3926 Anmoore Road</li>
+							<li>Newyork, NY 10014</li>
+							<li>718-749-1714</li>
+						</ul>				
+					</div>
+					<div class="col-md-3 footer-grid">
+						<h4>Popular</h4>
+						<ul>
+							<li><a href="#">Hard Rock</a></li>
+							<li><a href="#">African Music</a></li>
+							<li><a href="#">Hip Hop Music</a></li>
+							<li><a href="#">Folk Music</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3 footer-grid">
+						<h4>Details</h4>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="playlist">Albums</a></li>
+							<li><a href="songs">Songs</a></li>
+							<li><a href="comments">Comments</a></li>
+							<li><a href="playcount">PlayCount</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3 footer-grid">
+						<h2><a href="index.html">MUSIC LIFE</a></h2>
+						<p>Copyright &copy; 2016.Company name All rights </p>
+					</div>
+					<div class="clearfix"></div>
+			</div>
+		<!--//footer-->
+	</div>
+	<div class="clearfix"></div>
+</div>
+
+<!-- //banner -->
+<!-- for bootstrap working -->
+	<script src="/js/bootstrap.js"></script>
+<!-- //for bootstrap working -->
+<!-- smooth scrolling -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+		/*
+			var defaults = {
+			containerID: 'toTop', // fading element id
+			containerHoverID: 'toTopHover', // fading element hover id
+			scrollSpeed: 1200,
+			easingType: 'linear' 
+			};
+		*/								
+		$().UItoTop({ easingType: 'easeOutQuart' });
+		});
+	</script>
+	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+<!-- //smooth scrolling -->
+</body>
+</html>

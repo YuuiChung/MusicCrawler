@@ -1,0 +1,18 @@
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+    <typeAliases>
+        <typeAlias alias="Song" type="com.yrw.crawler.model.Song"/>
+        <typeAlias alias="PlayList" type="com.yrw.crawler.model.PlayList"/>
+        <typeAlias alias="WebPage" type="com.yrw.crawler.model.WebPage"/>
+    </typeAliases>
+     <plugins>
+    	    <plugin interceptor="com.github.pagehelper.PageHelper">
+      		<property name="dialect" value="mysql"/>
+    		</plugin>
+  	</plugins>
+
+</configuration>
