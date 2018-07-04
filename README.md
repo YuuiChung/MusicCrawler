@@ -5,19 +5,6 @@ http://www.wkis.top:8080/crawler/songs
 ![](https://github.com/YuuiChung/MusicCrawler/blob/master/src/main/resources/static/webImage/2.png)
 ![](https://github.com/YuuiChung/MusicCrawler/blob/master/src/main/resources/static/webImage/3.png)
 ![](https://github.com/YuuiChung/MusicCrawler/blob/master/src/main/resources/static/webImage/4.png)
-## 目录
-├── com.yrw.crawler <br>
-　　├── Application.java		//启动Spring boot<br>
-　　├── Crawler.java			// 爬虫的接口，定义了爬虫重要方法<br>
-　　├── HtmlFetcher.java		//获取Html页面的方法<br>
-　　├── HtmlParser.java			//解析Html页面的方法<br>   	 	 
-├── com.yrw.crawler.impl<br>
-　　├── MultiCrawlerThread.java			//爬虫的流程<br>
-　　├── MultiCrawlerWithMybatis.java	//爬虫的实现类，用mybatis实现<br>
-├── com.yrw.crawler.controller		 //controller层，用于展示爬虫的结果<br>
-├── com.yrw.crawler.mapper			// mapper层，用mybatis实现数据持久化<br>
-├── com.yrw.model			// 数据模型<br>
-├── com.yrw.task			//定时任务<br>
 
 ## 使用方法：
 #### 建立3个表：
@@ -66,4 +53,4 @@ CREATE TABLE IF NOT EXISTS `song` (<br>
 
 [歌曲页面](http://music.163.com/#/song?id=143238)
 
-感谢：[yuanrw/MusicCrawler](https://github.com/yuanrw/MusicCrawler)
+
