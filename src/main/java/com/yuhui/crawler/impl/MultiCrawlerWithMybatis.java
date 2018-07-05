@@ -1,4 +1,4 @@
-package com.yrw.crawler.impl;
+package com.yuhui.crawler.impl;
 
 import java.util.List;
 import java.util.concurrent.ExecutorService;
@@ -8,15 +8,15 @@ import java.util.concurrent.TimeUnit;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.yrw.crawler.Crawler;
-import com.yrw.crawler.model.PlayList;
-import com.yrw.crawler.model.Song;
-import com.yrw.crawler.model.WebPage;
-import com.yrw.crawler.model.WebPage.PageType;
-import com.yrw.crawler.model.WebPage.Status;
-import com.yrw.crawler.mapper.PlayListMapper;
-import com.yrw.crawler.mapper.SongMapper;
-import com.yrw.crawler.mapper.WebPageMapper;
+import com.yuhui.crawler.Crawler;
+import com.yuhui.crawler.mapper.PlayListMapper;
+import com.yuhui.crawler.mapper.SongMapper;
+import com.yuhui.crawler.mapper.WebPageMapper;
+import com.yuhui.crawler.model.PlayList;
+import com.yuhui.crawler.model.Song;
+import com.yuhui.crawler.model.WebPage;
+import com.yuhui.crawler.model.WebPage.PageType;
+import com.yuhui.crawler.model.WebPage.Status;
 
 @Component
 public class MultiCrawlerWithMybatis implements Crawler {

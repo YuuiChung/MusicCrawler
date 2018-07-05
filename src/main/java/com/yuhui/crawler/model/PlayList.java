@@ -1,4 +1,4 @@
-package com.yrw.crawler.model;
+package com.yuhui.crawler.model;
 
 
 import java.io.Serializable;

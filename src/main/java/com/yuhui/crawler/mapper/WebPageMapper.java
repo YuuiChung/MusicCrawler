@@ -1,13 +1,13 @@
-package com.yrw.crawler.mapper;
+package com.yuhui.crawler.mapper;
 
 import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
-import com.yrw.crawler.model.WebPage;
-import com.yrw.crawler.model.WebPage.PageType;
-import com.yrw.crawler.model.WebPage.Status;
+import com.yuhui.crawler.model.WebPage;
+import com.yuhui.crawler.model.WebPage.PageType;
+import com.yuhui.crawler.model.WebPage.Status;
 
 @Mapper
 public interface WebPageMapper {

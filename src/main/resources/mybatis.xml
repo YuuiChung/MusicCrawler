@@ -5,9 +5,9 @@
 <configuration>
 
     <typeAliases>
-        <typeAlias alias="Song" type="com.yrw.crawler.model.Song"/>
-        <typeAlias alias="PlayList" type="com.yrw.crawler.model.PlayList"/>
-        <typeAlias alias="WebPage" type="com.yrw.crawler.model.WebPage"/>
+        <typeAlias alias="Song" type="com.yuhui.crawler.model.Song"/>
+        <typeAlias alias="PlayList" type="com.yuhui.crawler.model.PlayList"/>
+        <typeAlias alias="WebPage" type="com.yuhui.crawler.model.WebPage"/>
     </typeAliases>
      <plugins>
     	    <plugin interceptor="com.github.pagehelper.PageHelper">

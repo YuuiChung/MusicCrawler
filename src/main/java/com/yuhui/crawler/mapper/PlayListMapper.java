@@ -1,11 +1,11 @@
-package com.yrw.crawler.mapper;
+package com.yuhui.crawler.mapper;
 
 import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
-import com.yrw.crawler.model.PlayList;
+import com.yuhui.crawler.model.PlayList;
 
 @Mapper
 public interface PlayListMapper {

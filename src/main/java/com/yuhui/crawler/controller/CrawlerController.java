@@ -1,4 +1,4 @@
-package com.yrw.crawler.controller;
+package com.yuhui.crawler.controller;
 
 import java.io.IOException;
 import java.util.Optional;
@@ -13,11 +13,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.yrw.crawler.HtmlParser;
-import com.yrw.crawler.impl.MultiCrawlerWithMybatis;
-import com.yrw.crawler.mapper.PlayListMapper;
-import com.yrw.crawler.mapper.SongMapper;
-import com.yrw.crawler.model.PlayList;
+import com.yuhui.crawler.HtmlParser;
+import com.yuhui.crawler.impl.MultiCrawlerWithMybatis;
+import com.yuhui.crawler.mapper.PlayListMapper;
+import com.yuhui.crawler.mapper.SongMapper;
+import com.yuhui.crawler.model.PlayList;
 
 @Controller
 @RequestMapping("/crawler")

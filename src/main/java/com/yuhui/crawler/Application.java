@@ -1,4 +1,4 @@
-package com.yrw.crawler;
+package com.yuhui.crawler;
 
 import java.io.IOException;
 import java.net.URISyntaxException;

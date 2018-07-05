@@ -1,4 +1,4 @@
-package com.yrw.crawler;
+package com.yuhui.crawler;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -21,10 +21,10 @@ import org.jsoup.select.Elements;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONPath;
 import com.google.common.collect.ImmutableMap;
-import com.yrw.crawler.model.PlayList;
-import com.yrw.crawler.model.Song;
-import com.yrw.crawler.model.WebPage;
-import com.yrw.crawler.model.WebPage.PageType;
+import com.yuhui.crawler.model.PlayList;
+import com.yuhui.crawler.model.Song;
+import com.yuhui.crawler.model.WebPage;
+import com.yuhui.crawler.model.WebPage.PageType;
 
 public class HtmlParser {
 

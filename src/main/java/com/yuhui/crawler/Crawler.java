@@ -1,10 +1,10 @@
-package com.yrw.crawler;
+package com.yuhui.crawler;
 
 import java.util.List;
 
-import com.yrw.crawler.model.PlayList;
-import com.yrw.crawler.model.Song;
-import com.yrw.crawler.model.WebPage;
+import com.yuhui.crawler.model.PlayList;
+import com.yuhui.crawler.model.Song;
+import com.yuhui.crawler.model.WebPage;
 
 public interface Crawler {
 	/**
@@ -40,7 +40,6 @@ public interface Crawler {
     
     /**
      * 获取未爬页面->获取html->解析html并对结果进行处理->标记页面
-     * 即流程图右下角黑框部分
      */
     void doRun();
 
